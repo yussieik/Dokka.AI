@@ -17,6 +17,8 @@ current_dir = pathlib.Path.cwd()
 
 app = Flask(__name__, template_folder = 'templates')
 
+
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 app.secret_key = "secret key"
 #app.config['DOWNLOAD_FOLDER'] = current_dir / 'downloads'
 app.config['WORK_FOLDER'] = current_dir / 'work'
