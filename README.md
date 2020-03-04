@@ -1,6 +1,6 @@
 # Dokka.AI
 
-In order to run the app, one will need to:
+In order to run the app, one will have to:
 1. Access a virual environment inside a shell, such as Anaconda Prompt and other command-line tools. 
 2. navigate (cd) to the directory of the app, for example "cd G:\Python\Dokka.AI"
 3. Write "python App.py"
