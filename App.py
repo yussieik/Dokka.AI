@@ -85,8 +85,8 @@ def process_file(points):
         else:
             for j in range(i+2, len(l), 2):
                     links.append({'name': l[i] + l[j], 'distance': calculate_distance(float(l[i+1][0]), float(l[i+1][1]), float(l[j+1][0]), float(l[j+1][1]))})
-   
-    return jsonify({points : points, links : links})    
+    jsonf = {"Points" : points, "Links" : links}
+    return jsonify(jsonf)    
         
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
