@@ -41,6 +41,7 @@ def getAddress():
            filename = secure_filename(file.filename)
            file.save(os.path.join(app.config['WORK_FOLDER'], filename))
            process_file(os.path.join(app.config['WORK_FOLDER'], filename))
+           return redirect('/')
    return render_template('file_upload_form.html')
       
 def process_file(filename):
