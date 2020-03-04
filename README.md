@@ -16,5 +16,5 @@ Once done that - a window in the browser will pop up with the address http://127
 
 
 5. A window with JSON format result will appear + the app automatically delivers the processed result to the user into "\Dokka.AI\work" with the name of the original file.
-![img3](images/5.png)
-![img4](images/6.png)
+![img3|50%](images/5.png)
+![img4|50%](images/6.png)
