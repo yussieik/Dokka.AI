@@ -22,7 +22,6 @@ app = Flask(__name__, template_folder = 'templates')
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 app.secret_key = "secret key"
-#app.config['DOWNLOAD_FOLDER'] = current_dir / 'downloads'
 app.config['WORK_FOLDER'] = current_dir / 'work'
 
 ALLOWED_EXTENSIONS = {'csv'}
