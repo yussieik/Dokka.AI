@@ -12,11 +12,13 @@ from flask import Flask, request, render_template, redirect, url_for
 import webbrowser
 import json
 
+
 current_dir = pathlib.Path.cwd()
 
 app = Flask(__name__, template_folder = 'templates')
 
 app.secret_key = "secret key"
+#app.config['DOWNLOAD_FOLDER'] = current_dir / 'downloads'
 app.config['WORK_FOLDER'] = current_dir / 'work'
 
 ALLOWED_EXTENSIONS = {'csv'}
@@ -40,11 +42,12 @@ def getAddress():
        if file and allowed_file(file.filename):
            filename = secure_filename(file.filename)
            file.save(os.path.join(app.config['WORK_FOLDER'], filename))
-           process_file(os.path.join(app.config['WORK_FOLDER'], filename))
-           return redirect('/')
+           a = process_file(os.path.join(app.config['WORK_FOLDER'], filename))
+           return a
    return render_template('file_upload_form.html')
       
 def process_file(filename):
+    
     
     def calculate_distance(lat1, lon1, lat2, lon2):
         # approximate radius of earth in mm
@@ -84,9 +87,11 @@ def process_file(filename):
 
     with open(filename, 'w', encoding = "utf-8") as f:
         json.dump(jsonf, f, ensure_ascii=False, indent=4)            
-        
-
+    return jsonify({"points": points, "links": links})    
+               
+            
 if __name__ == "__main__":
     webbrowser.open('http://localhost:5000')
     port = int(os.environ.get("PORT", 5000))
     app.run(host='127.0.0.1', port=port)
+
