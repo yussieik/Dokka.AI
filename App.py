@@ -43,7 +43,7 @@ def get_address():
            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
            process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
            return redirect(url_for('uploaded_file', filename=filename))
-   return render_template('get_address.html')
+   return render_template('file_upload_form.html')
       
 def process_file(points):
     
