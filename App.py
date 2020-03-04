@@ -87,8 +87,7 @@ def process_file(filename):
     
     
     jsonf = {"Points" : points, "Links" : links}
-
-    with open(filename, 'w', encoding = "utf-8") as f:
+    with open(filename[:-3] + 'json', 'w', encoding = "utf-8") as f:
         json.dump(jsonf, f, ensure_ascii=False, indent=4)            
     return jsonify({"points": points, "links": links})    
                
