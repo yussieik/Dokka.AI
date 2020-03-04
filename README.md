@@ -7,7 +7,7 @@ In order to run the app, one will need to:
 Once done that - a window in the browser will pop up with the address http://127.0.0.1:5000/ . This means the App is initialized. 
 ![img1](images/1.JPG)
 4. Upload a CSV file of the form : 
-
+![img2](images/4.JPG)
 Once it's done there will be conducted a download of the file inside the "\Dokka.AI\uploads" folder for the application usage.
 
 5. The app automatically delivers the processed result to the user into "\Dokka.AI\downloads".
