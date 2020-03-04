@@ -15,4 +15,5 @@ Once done that - a window in the browser will pop up with the address http://127
 
 
 Once it's done there will be conducted a download of the file inside the "\Dokka.AI\uploads" folder for the application usage.
+
 5. The app automatically delivers the processed result to the user into "\Dokka.AI\downloads".
