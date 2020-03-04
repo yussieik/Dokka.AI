@@ -5,13 +5,10 @@ Created on Mon Mar  2 15:52:12 2020
 """
 import pathlib
 import csv
-import pandas as pd
 from math import sin, cos, sqrt, atan2, radians
-import sys
 import os
 from werkzeug import secure_filename
-from flask import Flask, jsonify, request, render_template, flash, redirect, url_for, send_from_directory
-from flask_restful import Resource
+from flask import Flask, request, render_template, redirect, url_for
 import webbrowser
 import json
 
