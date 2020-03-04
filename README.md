@@ -15,5 +15,5 @@ Once done that - a window in the browser will pop up with the address http://127
 
 
 
-5. A window with JSON format result will appear + the app automatically delivers the processed result to the user into "\Dokka.AI\work" with the name of the original file.
+5. Receive a window with JSON format result will appear + the app automatically delivers the processed result to the user into "\Dokka.AI\work" with the name of the original file.
 
