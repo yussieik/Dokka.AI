@@ -5,20 +5,22 @@ Created on Mon Mar  2 15:52:12 2020
 """
 import pathlib
 import csv
+import pandas as pd
 from math import sin, cos, sqrt, atan2, radians
+import sys
 import os
 from werkzeug import secure_filename
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, jsonify, request, render_template, flash, redirect, url_for, send_from_directory
+from flask_restful import Resource
 import webbrowser
 import json
-
 
 current_dir = pathlib.Path.cwd()
 
 app = Flask(__name__, template_folder = 'templates')
 
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 app.secret_key = "secret key"
 #app.config['DOWNLOAD_FOLDER'] = current_dir / 'downloads'
 app.config['WORK_FOLDER'] = current_dir / 'work'
@@ -96,4 +98,3 @@ if __name__ == "__main__":
     webbrowser.open('http://localhost:5000')
     port = int(os.environ.get("PORT", 5000))
     app.run(host='127.0.0.1', port=port)
-
