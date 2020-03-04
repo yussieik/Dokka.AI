@@ -49,12 +49,6 @@ def getAddress():
       
 def process_file(filename):
     
-##    def upload_file():
-##        if request.method == 'POST':
-##          points = request.files['file']
-##          points.save(secure_filename(points.filename))
-##          return points
-    
     def calculate_distance(lat1, lon1, lat2, lon2):
         # approximate radius of earth in mm
         radius = 6371.0 * 1000 
